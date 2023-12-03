@@ -1,0 +1,136 @@
+@media (max-width: 428px) {
+    .team-member {
+      width: 48%; /* Two team members side by side with a small gap */
+      margin: 1%; /* Adjust the gap as needed */
+    }
+  
+    .team-members {
+      margin-top: 80px; /* Adjust the top margin as needed */
+    }
+  
+    .team-member img {
+      width: 100%; /* Make images fill the container */
+    }
+  
+    header img {
+      width: 80px; /* Adjust the logo size as needed */
+      height: 80px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    header h1 {
+      font-size: 20px; /* Adjust the font size as needed */
+      margin: 10px;
+    }
+  
+    footer p {
+      font-size: 20px; /* Adjust the font size as needed */
+    }
+/* All media queries */
+@media all, (max-width: 768px), (min-width: 769px) and (max-width: 1024px), (min-width: 1025px) {
+    /* CSS for all devices */
+  
+    /* Small screen devices (e.g. mobile phones) */
+    @media (max-width: 768px) {
+      header {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      header h1{
+        font-size: 80px;
+      }
+      
+      header img{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+      
+      .team-members {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      
+      .team-member h3 {
+        font-size: 33px; /* Adjust the font size as needed */
+      }
+      
+      .team-member {
+        width: 100%; /* Full width for team members on small screens */
+        margin-bottom: 20px;
+      }
+      
+      .team-member img {
+        width: 100%; /* Full width for team member images on small screens */
+        height: auto; /* Maintain aspect ratio */
+      }
+  
+      .bttn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px; /* Adjust margin as needed */
+      }
+  
+      footer p {
+        font-size: 40px;
+      }
+    }
+  
+    /* Medium screen devices (e.g. tablets) */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      header {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      header h1{
+        font-size: 80px;
+      }
+      
+      header img{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      
+      .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .team-member h3 {
+        font-size: 40px;
+      }
+      
+      .team-member {
+        width: 48%; /* Two team members side by side with a small gap */
+        margin: 1%;
+      }
+      
+      .team-member img {
+        width: 400px;
+        height: 400px;
+      }
+  
+      .bttn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px; /* Adjust margin as needed */
+      }
+  
+      footer p {
+        font-size: 40px;
+      }
+    }
+  }
+  

@@ -1,0 +1,191 @@
+ /* Set the background color of the header and footer */
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+ header, footer {
+   background-color: #000000c8;
+   color: #848396;
+ }
+ 
+ header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+ }
+ 
+ header img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   margin-top: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 20px;
+ }
+ header h1{
+   margin: 20px 20px 20px 0px;
+ }
+ 
+ .team-name {
+   margin-top: 10px;
+   text-align: center;
+ }
+ 
+ .team-member h3 {
+   display: block;
+   margin-top: 10px;
+   text-align: center;
+   color: #848396;
+ }
+ 
+ /* Set the background animation */
+ body {
+     
+   background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjttbBMg4eWlPHogZpg5g3ohOi7ixdKtpGm38KW9dIQ81_5CaT1EdHkQ-xrwsd40LbSkvhfkkHYCJUm0bMyx26sBEVXOWwzjNx0Me0GGnkeknnH2mWubHLG2kt5qPZpDhdhyXOqxng8sLXy5Y2HmexbXnqm9MWrXzpv4A3iY4HtCLg3KohyBIAxHQQPrX0/s500/Error404%20(2).png");
+   background-size: cover;
+   animation: ai-background-animation 10s infinite;
+   border: 50px solid transparent;
+   margin: 0;
+ }
+ 
+ @keyframes ai-background-animation {
+   from {
+     background-position: 0% 0%;
+   }
+ 
+   to {
+     background-position: 100% 0%;
+   }
+ }
+ 
+ /* Align the team members next to each other */
+ .team-members {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-top: 150px;
+ }
+ 
+ /* Make the team members profile mode */
+ .team-member {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+   flex-direction: column;
+ 
+   width:250px; /* Adjust the width as needed */
+   text-align: center;
+ }
+ 
+ .team-member img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+ }
+ 
+ .bttn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ :root {
+   --primary: 250 66% 61%;
+ }
+ .btn {
+   all: unset;
+   font-size: 24px;
+   padding: 14px 52px;
+   background: hsl(0, 0%, 0%);
+   color: white;
+   text-transform: uppercase;
+   position: relative;
+   border-radius: 100px;
+   cursor: pointer;
+ }
+ 
+ .btn > span {
+   font-family: "Roboto";
+   letter-spacing: 1px;
+   position: relative;
+   z-index: 10;
+   transition: 0.25s ease;
+ }
+ .btn:hover > span {
+   color: hsl(var(--primary) / 1);
+ }
+ 
+ @property --angle {
+   syntax: "<angle>";
+   initial-value: 0deg;
+   inherits: false;
+ }
+ 
+ .btn::before,
+ .btn::after {
+   content: "";
+   position: absolute;
+   inset: -2px;
+   background-color: inherit;
+   border-radius: inherit;
+   background-image: conic-gradient(
+     from var(--angle) at 50% 50%,
+     transparent 0%,
+     transparent 33%,
+     hsl(var(--primary)) 50%,
+     transparent 66%,
+     transparent 100%
+   );
+   animation: rotate 2s infinite linear;
+   z-index: -1;
+ }
+ 
+ .btn::before {
+   filter: blur(15px);
+ }
+ 
+ .inner {
+   position: absolute;
+   inset: 0;
+   background: radial-gradient(
+     100px circle at var(--mouseX) var(--mouseY),
+     hsl(var(--primary) / 0.3),
+     transparent 50%
+   );
+   border-radius: inherit;
+   z-index: 0;
+   opacity: 0;
+ }
+ .btn:hover .inner {
+   opacity: 1;
+ }
+ 
+ @keyframes rotate {
+   0% {
+     --angle: 0deg;
+   }
+   100% {
+     --angle: 360deg;
+   }
+ }
+ 
+ a {
+     color: blue; /* Default color */
+     text-decoration: none; /* Remove underline */
+   }
+ a:visited {
+     color: purple; /* Color for visited links */
+ }
+ 
+ 
+ footer {
+   display: flex;
+   justify-content: space-around;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+ }

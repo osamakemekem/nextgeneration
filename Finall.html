@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Next Generation Team</title>
+  <link rel="icon" href="/images/Final.png">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+    /* Set the background color of the header and footer */
+header, footer {
+  background-color: #000000c8;
+  color: #848396;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+header h1{
+  margin: 20px 20px 20px 0px;
+}
+
+.team-name {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.team-member h3 {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #848396;
+}
+
+/* Set the background animation */
+body {
+    
+  background-image: url("/images/Untitled-3.png");
+  background-size: cover;
+  animation: ai-background-animation 10s infinite;
+  border: 50px solid transparent;
+  margin: 0;
+}
+
+@keyframes ai-background-animation {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 0%;
+  }
+}
+
+/* Align the team members next to each other */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+
+/* Make the team members profile mode */
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  width:250px; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+
+.bttn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ :root {
+   --primary: 250 66% 61%;
+ }
+ .btn {
+   all: unset;
+   font-size: 24px;
+   padding: 14px 52px;
+   background: hsl(0, 0%, 0%);
+   color: white;
+   text-transform: uppercase;
+   position: relative;
+   border-radius: 100px;
+   cursor: pointer;
+ }
+ 
+ .btn > span {
+   font-family: "Roboto";
+   letter-spacing: 1px;
+   position: relative;
+   z-index: 10;
+   transition: 0.25s ease;
+ }
+ .btn:hover > span {
+   color: hsl(var(--primary) / 1);
+ }
+ 
+ @property --angle {
+   syntax: "<angle>";
+   initial-value: 0deg;
+   inherits: false;
+ }
+ 
+ .btn::before,
+ .btn::after {
+   content: "";
+   position: absolute;
+   inset: -2px;
+   background-color: inherit;
+   border-radius: inherit;
+   background-image: conic-gradient(
+     from var(--angle) at 50% 50%,
+     transparent 0%,
+     transparent 33%,
+     hsl(var(--primary)) 50%,
+     transparent 66%,
+     transparent 100%
+   );
+   animation: rotate 2s infinite linear;
+   z-index: -1;
+ }
+ 
+ .btn::before {
+   filter: blur(15px);
+ }
+ 
+ .inner {
+   position: absolute;
+   inset: 0;
+   background: radial-gradient(
+     100px circle at var(--mouseX) var(--mouseY),
+     hsl(var(--primary) / 0.3),
+     transparent 50%
+   );
+   border-radius: inherit;
+   z-index: 0;
+   opacity: 0;
+ }
+ .btn:hover .inner {
+   opacity: 1;
+ }
+ 
+ @keyframes rotate {
+   0% {
+     --angle: 0deg;
+   }
+   100% {
+     --angle: 360deg;
+   }
+ }
+ 
+ a {
+     color: blue; /* Default color */
+     text-decoration: none; /* Remove underline */
+   }
+ a:visited {
+     color: purple; /* Color for visited links */
+ }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+//Media queries
+/* All media queries */
+@media all, (max-width: 768px), (min-width: 769px) and (max-width: 1024px), (min-width: 1025px) {
+  /* CSS for all devices */
+
+  /* Small screen devices ( mobile phones) */
+  /* @media (max-width: 768px) {
+
+    .team-member h3 {
+    font-size: 500px;
+  }
+
+  .team-member img {
+    width: 175px;
+    height: 175px;
+  }
+    
+  }
+
+  /* Medium screen devices ( tablets) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .team-member img {
+      width: 200px;
+      height: 00px;
+    }
+  } */
+}
+/* All media queries */
+@media all, (max-width: 768px), (min-width: 769px) and (max-width: 1024px), (min-width: 1025px) {
+  /* CSS for all devices */
+
+  /* Small screen devices (e.g. mobile phones) */
+  @media (max-width: 768px) {
+    .team-members {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Medium screen devices (e.g. tablets) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+    header h1{
+        font-size: 80px;
+    }
+    header img{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc((100% - 40%) / 2 );
+      margin-bottom: calc((100% - 80%) / 2 );
+    }
+    .team-member h3 {
+    font-size: 40px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 33px; /* Adjust the font size as needed */
+  }
+
+  .team-member img {
+    width: 400px;
+    height: 400px;
+    
+  }
+  .team-member{
+    width: 46%; /* Two team members side by side with a small gap */
+      margin: 2%;
+  }
+  .btn {
+    padding: 25px 40px; /* Adjust padding for smaller devices */
+  }
+   span{
+    font-size: 40px !important;
+  }
+  footer p{
+    font-size: 40px;
+  }
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/Final.png">
+    <h1 class="team-name">Next Generation Team</h1>
+    <img src="/images/Final.png">
+
+    
+  </header>
+
+  <div class="team-members">
+
+    <div class="team-member">
+        <img src="/images/Mariam.jpg" alt="Mariam Alamir">
+        <h3>Mariam Alamir</h3>
+      </div>
+  
+      <div class="team-member">
+        <img src="/images/Roaa.jpg" alt="Roaa Mansour">
+        <h3>Roaa Mansour</h3>
+      </div>
+    
+    <div class="team-member">
+        <img src="/images/Osama.png" alt="Osama Ramadan">
+        <h3>Osama Ramadan</h3>
+      </div>
+
+    
+    <div class="team-member">
+        <img src="/images/Mohamed .jpg" alt="Mohamed Mahmoud">
+        <h3>Mohamed Mahmoud</h3>
+      </div>
+  
+      <div class="team-member">
+        <img src="/images/Ahmed.jpg" alt="Ahmed Khaled">
+        <h3>Ahmed Khaled</h3>
+      </div>
+      <div class="team-member">
+        <img src="/images/Rodaina.png" alt="Rodaina Hisham">
+        <h3>Rodaina Hisham</h3>
+      </div>
+
+    
+    <div class="team-member">
+      <img src="/images/Shahd.jpg" alt="Shahd Tag">
+      <h3>Shahd Tag</h3>
+      </div>
+      
+      <div class="team-member">
+        <img src="/images/Shahd Faiz.png" alt="Shahd Faiz">
+        <h3>Shahd Faiz</h3>
+      </div>
+
+      <div class="bttn">
+    <a href="https://t.me/NextGenerationTeam_Bot">
+      <button class="btn">
+        <div class="inner"></div>
+        <span>Contact Us</span>
+      </button>
+    </a>
+    </div>
+
+  </div>
+
+  
+
+
+  <footer>
+    <p>Copyright &copy; 2023 Next Generation Team</p>
+  </footer>
+</body>
+<script>
+  const button = document.querySelector(".btn");
+  const inner = document.querySelector(".inner");
+
+  button.addEventListener("mousemove", (e) => {
+  const rect = button.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  button.style.setProperty("--mouseX", `${x}px`);
+  button.style.setProperty("--mouseY", `${y}px`);
+  });
+
+</script>
+</html>
